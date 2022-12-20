@@ -548,6 +548,7 @@ transition: var(--transition-dur-and-func);
     visibility: hidden;
     pointer-events: none;
 }
+
 .modal {
     position: absolute;
     top: 50%;
@@ -557,7 +558,15 @@ transition: var(--transition-dur-and-func);
     height: 576px; 
     background-color: #FCFCFC;
     border-radius: 4px;
+
+    transition-property: transform;
+    transition-duration: 250ms;
+
 }
+.backdrop.is-hidden .modal {
+    transform: translate(-50%,-50%) scale(1.2);
+    }
+
 .modal-close-btn {
     position: absolute;
     top: 24px;
